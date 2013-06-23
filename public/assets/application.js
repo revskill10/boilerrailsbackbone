@@ -1,0 +1,1 @@
+requirejs.config({baseUrl:"/assets",paths:{jquery:"jquery",underscore:"underscore-min",backbone:"backbone-min","handlebars.runtime":"handlebars.runtime"},shim:{backbone:{deps:["underscore","jquery"],exports:"Backbone"},underscore:{exports:"_"}}});

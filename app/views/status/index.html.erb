@@ -1,0 +1,28 @@
+<% content_for :head do %>
+<script  src="/assets/require-2.1.6.js"></script>
+ <script>
+requirejs.config({
+  baseUrl: "/assets",
+  paths: {
+    'jquery': 'jquery',
+    'underscore': 'underscore-min',
+    'backbone': 'backbone-min',
+    'handlebars.runtime': 'handlebars.runtime'    
+  },
+  shim: {
+    'backbone': {
+      deps: ['underscore', 'jquery'],
+      exports: 'Backbone'
+    },
+    'underscore': {
+      exports: '_'
+    }
+  }
+});
+</script>
+<script  src="/assets/status.js"></script>
+  <% end %>
+
+<div id="new-status"></div>
+
+     <div id="statuses"></div>
